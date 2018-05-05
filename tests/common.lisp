@@ -1,13 +1,11 @@
+(in-package :cl-user)
 (defpackage common-test
   (:use :cl
-        :common
-        :prove))
+        :common))
 (in-package :common-test)
 
-;; NOTE: To run this test file, execute `(asdf:test-system :common)' in your Lisp.
+(let1 (x 1)
+      (print x))
 
-(plan nil)
-
-;; blah blah blah.
-
-(finalize)
+(dotimestimes (x 3 y 5)
+              (format t "~A - ~A~%" x y))
